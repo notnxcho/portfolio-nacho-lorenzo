@@ -1,0 +1,394 @@
+@font-face {
+    font-family: 'Gilroy', sans-serif;
+    src: url(../assets/fonts/Gilroy-FREE/Gilroy-ExtraBold.otf);
+    font-weight: 900;
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.outer-frame{
+    position: fixed;
+    background-color:rgb(255, 255, 255);
+    z-index: 10;
+}
+.outer-frame-left{
+    height: 100vh;
+    width: 50px;
+    left: 0px;
+    transform-origin:left;
+}
+.outer-frame-right{
+    height: 100vh;
+    width: 50px;
+    right: 0px;
+    transform-origin:right;
+}
+.outer-frame-top{
+    width: 100vw;
+    height: 50px;
+    z-index: 11;
+    top: 0px;
+    padding-left:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform-origin:top;
+}
+.outer-frame-bot{
+    width: 100vw;
+    height: 50px;
+    bottom: 0px;
+    transform-origin:bottom;
+}
+.logo{
+    font-family: 'Gilroy', sans-serif;
+    color:#212222;
+    margin:0px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.home-background-split{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F8f8f8;
+    position: relative;
+}
+.red-slice{
+    background-color: #FF584F;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-text-wrapper{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.main-text{
+    color: #212222;
+    font-weight: 900;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 180px;
+    position: relative;
+    width:600px;
+    height: 150px;
+    margin:0px;
+    overflow: hidden;
+}
+.main-text p{
+    margin: 0px;
+    position: absolute;
+    top:-50px;
+    letter-spacing: 10px;
+    transform-origin: left bottom;
+}
+.main-text span{
+    color: #FF584F;
+    font-size: 200px;
+    margin-left: 10px;
+}
+.home-heading-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    left: 20%;
+}
+.heading-text-info {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    margin:0px;
+    margin-bottom:10px;
+    overflow: hidden;
+    height:24px;
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Libre Bakersville', serif;
+}
+.heading-text-info p {
+    color: #212222;
+    position: absolute;
+    left:-100%;
+}
+.heading-text {
+    font-weight: 900;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 30px;
+    position: relative;
+    margin:0px;
+    overflow: hidden;
+    height: 35px;
+    width:800px;
+}
+.heading-text p{
+    position: absolute;
+    top:100%;
+    color:#212222;
+}
+.heading-text p span{
+    color:white;
+}
+.menu-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    left:30px;
+    top:50vh;
+    cursor: pointer;
+    transform-origin: center right;
+}
+.menu-button:hover .menu-icon{
+    transform: scaleX(1.4);
+}
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: 0.2s ease-out;
+    height: 14px;
+    width: 25px;
+    transform-origin: right;
+    margin-right: 10px;
+}
+.line1{
+    background-color: #212222;
+    width: 70%;
+    height: 2px;
+}
+.line2{
+    background-color: #212222;
+    width: 100%;
+    height: 2px;
+}
+.line3{
+    background-color: #212222;
+    width: 50%;
+    height: 2px;
+}
+.menu-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 10px;
+    color:#212222;
+    width: 25px;
+    font-weight: 900;
+}
+.social-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right:20px;
+    top:50vh;
+    align-items: flex-end;
+    width: 18px;
+    transform-origin: center left;
+}
+.social-wrapper i {
+    margin-top:4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.social-wrapper i:hover{
+    margin-right:4px;
+}
+
+.content-about-section{
+    width: 100vw;
+    height:60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blured-spacer {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    background-image: url('../assets/images/WhatsApp\ Image\ 2020-09-22\ at\ 1.26.35\ AM.jpeg');
+    background-position: top;
+    background-size: cover;
+    background-color: rgba(248, 248, 248, 0.3);
+    background-blend-mode: soft-light;
+    bottom:0px;
+    
+}
+.about-section-trigger{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.about-section-pin{
+    display: flex;
+    flex-direction:column;
+    padding: 20vh 4vw;
+    width:35vw;
+    padding-left: 8vw;
+    min-height: 100vh;
+    background-color:#eee;
+}
+.about-header { 
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 900;
+    font-size:100px;
+    color: #FF584F;
+    text-transform: uppercase;
+}
+.about-section-info {
+    width: 57vw;
+    background-color:#F8f8f8;
+    min-height: 100vh;
+    padding:10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.about-section-progressbar {
+    width:5vw;
+    margin-right:3vw;
+    z-index: 3;
+    padding-right: 50px;
+    box-sizing: content-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.progressbar-rail {
+    height: 70vh;
+    width: 2px;
+    background-color: rgba(255, 88, 79, 0.4);
+    position: relative;
+    transform-origin: top center;
+}
+.progressbar-indicator {
+    position: absolute;
+    width:6px;
+    height: 50px;
+    background-color: #FF584F;
+    top:0;
+    left: -2px;
+}
+.about-fixed-item {
+    width: 100%;
+    z-index: 5;
+    padding: 10vh 8vw;
+    position: relative;
+    /* backdrop-filter: blur(5px); */
+}
+.about-info-item { 
+    width: 100%;
+    font-family: 'Gilroy', sans-serif;
+    font-size:26px;
+    display: flex;
+    flex-direction: column;
+    color:#212222;
+    
+}
+.about-info-item p{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.css-wordgame-wrapper p {
+    margin:0;
+    margin-right: 4px;
+}
+.css-wordgame-wrapper {
+    color:#263145;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.css-wordgame-wrapper span {
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+    width:0px;
+    color: #FF584F;
+    letter-spacing: 0px;
+}
+.mockup-designs-showcase-row {
+    width: 53.5vw;
+    height: 60vh;
+    position: absolute;
+    top:40vh;
+    left:0;
+    z-index: 1;
+}
+.mockup-designs-showcase-row img{
+    height: 60vh;
+    margin-right: 4vw;
+    /* box-shadow: 0px 10px 40px 0px rgba(0,0,0,00.2); */
+}
+.image-scroll-hider {
+    overflow: hidden;
+    position: relative;
+    height: 60vh;
+    display: flex;
+    width: 53.5vw;
+    flex-direction: row;
+    align-items: center;
+}
+.designs-block-wrapper {
+    position: absolute;
+    height:60vh;
+    left: -40vw;
+    width:max-content;
+    top: 0;
+}
+.about-spacer {
+    width: 100%;
+    height: 30vh;
+}
+.about-info-second-item { 
+    width: 100%;
+    font-family: 'Gilroy', sans-serif;
+    font-size:26px;
+    display: flex;
+    flex-direction: column;
+    color:#212222;
+}
+.about__team-player {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+.about__team-player span {
+    font-weight: 900;
+}
+.about__fast-learner {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0px;
+    margin-bottom: 4px;
+
+}
+.about__fast-learner span {
+    color: #FF584F;
+}
